@@ -19,8 +19,6 @@ class WordCell: UICollectionViewCell {
     let wordLabel: UILabel = {
         let label = UILabel()
         label.text = "TEST"
-        label.backgroundColor = .red
-        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
