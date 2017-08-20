@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		10A56C74DD37E0EFA57FCE97 /* Pods_TwitterDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D0C4CB620E3E6FD3C5B498 /* Pods_TwitterDemo.framework */; };
-		CA1C35891F4A4FA400CC053C /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C35881F4A4FA400CC053C /* HomeDatasourceController.swift */; };
+		CA1C358E1F4A53A300CC053C /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C358D1F4A53A300CC053C /* Cells.swift */; };
+		CA1C35901F4A543800CC053C /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C358F1F4A543800CC053C /* HomeDatasource.swift */; };
+		CA1C35921F4A547E00CC053C /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C35911F4A547E00CC053C /* HomeDatasourceController.swift */; };
 		CA9FF06A1F4A397D006A5AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF0691F4A397D006A5AD4 /* AppDelegate.swift */; };
 		CA9FF0711F4A397D006A5AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF0701F4A397D006A5AD4 /* Assets.xcassets */; };
 		CA9FF0741F4A397D006A5AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF0721F4A397D006A5AD4 /* LaunchScreen.storyboard */; };
@@ -18,7 +20,9 @@
 /* Begin PBXFileReference section */
 		645A0C7F5E8AB2EB62093DED /* Pods-TwitterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterDemo/Pods-TwitterDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8650DBD1F909FF5D64C94C /* Pods-TwitterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterDemo/Pods-TwitterDemo.release.xcconfig"; sourceTree = "<group>"; };
-		CA1C35881F4A4FA400CC053C /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		CA1C358D1F4A53A300CC053C /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cells.swift; path = VIew/Cells.swift; sourceTree = "<group>"; };
+		CA1C358F1F4A543800CC053C /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeDatasource.swift; path = Model/HomeDatasource.swift; sourceTree = "<group>"; };
+		CA1C35911F4A547E00CC053C /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeDatasourceController.swift; path = Controller/HomeDatasourceController.swift; sourceTree = "<group>"; };
 		CA9FF0661F4A397D006A5AD4 /* TwitterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9FF0691F4A397D006A5AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA9FF0701F4A397D006A5AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +52,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA1C358A1F4A536F00CC053C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C35911F4A547E00CC053C /* HomeDatasourceController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CA1C358B1F4A537700CC053C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C358F1F4A543800CC053C /* HomeDatasource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CA1C358C1F4A537C00CC053C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C358D1F4A53A300CC053C /* Cells.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		CA9FF05D1F4A397D006A5AD4 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +97,14 @@
 		CA9FF0681F4A397D006A5AD4 /* TwitterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CA9FF0691F4A397D006A5AD4 /* AppDelegate.swift */,
-				CA9FF0701F4A397D006A5AD4 /* Assets.xcassets */,
-				CA9FF07B1F4A3AC0006A5AD4 /* HomeController.swift */,
+				CA1C358A1F4A536F00CC053C /* Controller */,
+				CA1C358B1F4A537700CC053C /* Model */,
+				CA1C358C1F4A537C00CC053C /* View */,
 				CA9FF0751F4A397D006A5AD4 /* Info.plist */,
+				CA9FF0691F4A397D006A5AD4 /* AppDelegate.swift */,
+				CA9FF07B1F4A3AC0006A5AD4 /* HomeController.swift */,
+				CA9FF0701F4A397D006A5AD4 /* Assets.xcassets */,
 				CA9FF0721F4A397D006A5AD4 /* LaunchScreen.storyboard */,
-				CA1C35881F4A4FA400CC053C /* HomeDatasourceController.swift */,
 			);
 			path = TwitterDemo;
 			sourceTree = "<group>";
@@ -216,7 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1C35891F4A4FA400CC053C /* HomeDatasourceController.swift in Sources */,
+				CA1C35901F4A543800CC053C /* HomeDatasource.swift in Sources */,
+				CA1C35921F4A547E00CC053C /* HomeDatasourceController.swift in Sources */,
+				CA1C358E1F4A53A300CC053C /* Cells.swift in Sources */,
 				CA9FF06A1F4A397D006A5AD4 /* AppDelegate.swift in Sources */,
 				CA9FF07C1F4A3AC0006A5AD4 /* HomeController.swift in Sources */,
 			);
