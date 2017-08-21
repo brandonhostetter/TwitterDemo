@@ -18,6 +18,7 @@
 		CAF2ED2A1F4B3E59004A899E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED291F4B3E59004A899E /* User.swift */; };
 		CAF2ED2C1F4B41D7004A899E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2B1F4B41D7004A899E /* UserCell.swift */; };
 		CAF2ED2E1F4B420D004A899E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2D1F4B420D004A899E /* Constants.swift */; };
+		CAF2ED301F4B7FEC004A899E /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2F1F4B7FEC004A899E /* HomeDatasourceController+navbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CAF2ED291F4B3E59004A899E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		CAF2ED2B1F4B41D7004A899E /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = VIew/UserCell.swift; sourceTree = "<group>"; };
 		CAF2ED2D1F4B420D004A899E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CAF2ED2F1F4B7FEC004A899E /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HomeDatasourceController+navbar.swift"; path = "Controller/HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		F7D0C4CB620E3E6FD3C5B498 /* Pods_TwitterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				CA1C35911F4A547E00CC053C /* HomeDatasourceController.swift */,
+				CAF2ED2F1F4B7FEC004A899E /* HomeDatasourceController+navbar.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF2ED301F4B7FEC004A899E /* HomeDatasourceController+navbar.swift in Sources */,
 				CA1C35901F4A543800CC053C /* HomeDatasource.swift in Sources */,
 				CA1C35921F4A547E00CC053C /* HomeDatasourceController.swift in Sources */,
 				CAF2ED2A1F4B3E59004A899E /* User.swift in Sources */,

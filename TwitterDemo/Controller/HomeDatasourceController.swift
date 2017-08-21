@@ -12,13 +12,15 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupNavigationBarItems()
+        
         let homeDatasource = HomeDatasource()
         self.datasource = homeDatasource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         // removes extra space from top of second cell
-        // if we don't do this, there a little extra space at the top of ray's cell
+        // if we don't do this, there a little extra space at the top of dany's cell
         return 0
     }
     

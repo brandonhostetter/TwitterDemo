@@ -63,9 +63,9 @@ class UserCell: DatasourceCell {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(twitterBlue, for: .normal)
         // add button image and adjust position
-        button.setImage(#imageLiteral(resourceName: "follow"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "follow").withRenderingMode(.alwaysOriginal), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
         return button
     }()
     
