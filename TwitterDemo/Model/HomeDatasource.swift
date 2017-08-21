@@ -13,11 +13,11 @@ class HomeDatasource: Datasource {
     let users: [User] = {
         let brandonUser = User(name: "Brandon Hostetter", username: "@brandonhostetter", bioText: "This is my profile. Today is August 21st. We should see a total solar eclipse today at 2:30pm!", profileImage: #imageLiteral(resourceName: "profile_image"))
         let rayUser = User(name: "Ray Wenderlich", username: "@rwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software, and gaming.", profileImage: #imageLiteral(resourceName: "ray_profile_image"))
+        let grrmUser = User(name: "George RR Martin", username: "@GRRMspeaking", bioText: "New blog format coming soon! Till then... http://grrm.livejournal.com", profileImage: #imageLiteral(resourceName: "grrm_profile_image"))
+        let danyUser = User(name: "Daenerys Targaryen", username: "@MotherOfDragons", bioText: "Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen, Khaleesi of the Great Grass Sea, Protector of the Realm, Lady Regnant of the Seven Kingdoms, Breaker of Chains and Mother of Dragons", profileImage: #imageLiteral(resourceName: "daenerys_targaryen_profile_image"))
         
-        return [brandonUser, rayUser]
+        return [brandonUser, danyUser, rayUser, grrmUser]
     }()
-    
-//    let words = ["user1", "user2", "user3"]
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]

@@ -105,9 +105,9 @@
 		CA9FF0681F4A397D006A5AD4 /* TwitterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CA1C358A1F4A536F00CC053C /* Controller */,
 				CA1C358B1F4A537700CC053C /* Model */,
 				CA1C358C1F4A537C00CC053C /* View */,
+				CA1C358A1F4A536F00CC053C /* Controller */,
 				CA9FF0691F4A397D006A5AD4 /* AppDelegate.swift */,
 				CA9FF0701F4A397D006A5AD4 /* Assets.xcassets */,
 				CAF2ED2D1F4B420D004A899E /* Constants.swift */,
@@ -383,6 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.TwitterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -396,6 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.TwitterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
