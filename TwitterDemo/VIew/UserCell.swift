@@ -1,55 +1,22 @@
 //
-//  Cells.swift
+//  UserCell.swift
 //  TwitterDemo
 //
-//  Created by Brandon Hostetter on 8/20/17.
+//  Created by Brandon Hostetter on 8/21/17.
 //  Copyright © 2017 Brandon Hostetter. All rights reserved.
 //
 
 import LBTAComponents
 
-let twitterBlue = UIColor(r: 61, g: 167, b: 244)
-
-class UserFooter: DatasourceCell {
-    let textLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Show me more"
-        label.textColor = twitterBlue
-        label.font = UIFont.systemFont(ofSize: 16)
-        return label
-    }()
-    
-    override func setupViews() {
-        super.setupViews()
-        
-        addSubview(self.textLabel)
-        
-        self.textLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    }
-}
-
-class UserHeader: DatasourceCell {
-    let textLabel: UILabel = {
-        let label = UILabel()
-        label.text = "WHO TO FOLLOW"
-        label.font = UIFont.systemFont(ofSize: 16)
-        return label
-    }()
-    
-    override func setupViews() {
-        super.setupViews()
-        
-        addSubview(self.textLabel)
-        
-        self.textLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    }
-}
-
 class UserCell: DatasourceCell {
     
     override var datasourceItem: Any? {
         didSet {
-//            nameLabel.text = datasourceItem as? String
+            guard let user = datasourceItem as? User else { return }
+            self.nameLabel.text = user.name
+            self.usernameLabel.text = user.username
+            self.bioTextView.text = user.bioText
+            self.profileImageView.image = user.profileImage
         }
     }
     
@@ -63,14 +30,14 @@ class UserCell: DatasourceCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Brandon Hostetter"
+        label.text = "TEST"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
     let usernameLabel: UILabel = {
         let label = UILabel()
-        label.text = "@brandonhostetter"
+        label.text = "@test"
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor(r: 130, g: 130, b: 130)
         return label
@@ -78,7 +45,7 @@ class UserCell: DatasourceCell {
     
     let bioTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "This is my profile. Today is August 21st. We should see a total solar eclipse today at 2:30pm!"
+        textView.text = "some bio text"
         textView.font = UIFont.systemFont(ofSize: 15)
         // text view has a default bg color of white which will slightly cut off the bottom of our username label
         textView.backgroundColor = .clear
@@ -104,6 +71,9 @@ class UserCell: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        
         // add profile image to view
         addSubview(self.profileImageView)
         // add name label to view
@@ -114,7 +84,7 @@ class UserCell: DatasourceCell {
         addSubview(self.bioTextView)
         // add follow button to view
         addSubview(self.followButton)
-
+        
         self.profileImageView.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         
         self.nameLabel.anchor(self.profileImageView.topAnchor, left: self.profileImageView.rightAnchor, bottom: nil, right: self.followButton.leftAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 20)
