@@ -19,6 +19,7 @@
 		CAF2ED2C1F4B41D7004A899E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2B1F4B41D7004A899E /* UserCell.swift */; };
 		CAF2ED2E1F4B420D004A899E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2D1F4B420D004A899E /* Constants.swift */; };
 		CAF2ED301F4B7FEC004A899E /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2F1F4B7FEC004A899E /* HomeDatasourceController+navbar.swift */; };
+		CAF2ED321F4B85C9004A899E /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED311F4B85C9004A899E /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		CAF2ED2B1F4B41D7004A899E /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = VIew/UserCell.swift; sourceTree = "<group>"; };
 		CAF2ED2D1F4B420D004A899E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CAF2ED2F1F4B7FEC004A899E /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HomeDatasourceController+navbar.swift"; path = "Controller/HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
+		CAF2ED311F4B85C9004A899E /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetCell.swift; path = VIew/TweetCell.swift; sourceTree = "<group>"; };
 		F7D0C4CB620E3E6FD3C5B498 /* Pods_TwitterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			children = (
 				CA1C358D1F4A53A300CC053C /* UserHeaderFooter.swift */,
 				CAF2ED2B1F4B41D7004A899E /* UserCell.swift */,
+				CAF2ED311F4B85C9004A899E /* TweetCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				CA1C358E1F4A53A300CC053C /* UserHeaderFooter.swift in Sources */,
 				CA9FF06A1F4A397D006A5AD4 /* AppDelegate.swift in Sources */,
 				CA9FF07C1F4A3AC0006A5AD4 /* HomeController.swift in Sources */,
+				CAF2ED321F4B85C9004A899E /* TweetCell.swift in Sources */,
 				CAF2ED2C1F4B41D7004A899E /* UserCell.swift in Sources */,
 				CAF2ED2E1F4B420D004A899E /* Constants.swift in Sources */,
 			);
