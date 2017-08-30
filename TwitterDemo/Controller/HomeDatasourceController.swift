@@ -9,6 +9,12 @@
 import LBTAComponents
 
 class HomeDatasourceController: DatasourceController {
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        // makes it relayout the page when the phone rotates
+        collectionViewLayout.invalidateLayout()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
