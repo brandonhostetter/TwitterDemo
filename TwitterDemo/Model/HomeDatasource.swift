@@ -10,6 +10,12 @@ import LBTAComponents
 import TRON
 import SwiftyJSON
 
+extension Collection where Iterator.Element == JSON {
+    func decode<T: JSONDecodable>() throws -> [T] {
+        return try map({ try T(json: $0) })
+    }
+}
+
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
@@ -21,8 +27,8 @@ class HomeDatasource: Datasource, JSONDecodable {
                 throw NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey: "Parsing JSON failed."])
             }
 
-        self.users = usersArray.map({ return User(json: $0) })
-        self.tweets = tweetsArray.map({ return Tweet(json: $0) })
+        self.users = try usersArray.decode()
+        self.tweets = try tweetsArray.decode()
     }
     
     override func footerClasses() -> [DatasourceCell.Type]? {
