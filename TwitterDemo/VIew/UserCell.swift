@@ -15,13 +15,13 @@ class UserCell: DatasourceCell {
             guard let user = datasourceItem as? User else { return }
             self.nameLabel.text = user.name
             self.usernameLabel.text = user.username
-            self.bioTextView.text = user.bioText
-            self.profileImageView.image = user.profileImage
+            self.bioTextView.text = user.bioText            
+            self.profileImageView.loadImage(urlString: user.profileImageUrl)
         }
     }
     
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
+    let profileImageView: CachedImageView = {
+        let imageView = CachedImageView()
         imageView.image = #imageLiteral(resourceName: "profile_image")
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
