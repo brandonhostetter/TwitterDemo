@@ -16,6 +16,7 @@
 		CA9FF0741F4A397D006A5AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF0721F4A397D006A5AD4 /* LaunchScreen.storyboard */; };
 		CA9FF07C1F4A3AC0006A5AD4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF07B1F4A3AC0006A5AD4 /* HomeController.swift */; };
 		CABA64201F572FB1007C84CD /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA641F1F572FB1007C84CD /* Tweet.swift */; };
+		CABA64231F573FFF007C84CD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA64221F573FFF007C84CD /* Service.swift */; };
 		CAF2ED2A1F4B3E59004A899E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED291F4B3E59004A899E /* User.swift */; };
 		CAF2ED2C1F4B41D7004A899E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2B1F4B41D7004A899E /* UserCell.swift */; };
 		CAF2ED2E1F4B420D004A899E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2D1F4B420D004A899E /* Constants.swift */; };
@@ -36,6 +37,7 @@
 		CA9FF0751F4A397D006A5AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9FF07B1F4A3AC0006A5AD4 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CABA641F1F572FB1007C84CD /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Model/Tweet.swift; sourceTree = "<group>"; };
+		CABA64221F573FFF007C84CD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Service/Service.swift; sourceTree = "<group>"; };
 		CAF2ED291F4B3E59004A899E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		CAF2ED2B1F4B41D7004A899E /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = VIew/UserCell.swift; sourceTree = "<group>"; };
 		CAF2ED2D1F4B420D004A899E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		CA9FF0681F4A397D006A5AD4 /* TwitterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CABA64211F573FEE007C84CD /* Service */,
 				CA1C358B1F4A537700CC053C /* Model */,
 				CA1C358C1F4A537C00CC053C /* View */,
 				CA1C358A1F4A536F00CC053C /* Controller */,
@@ -125,6 +128,14 @@
 				CA9FF0721F4A397D006A5AD4 /* LaunchScreen.storyboard */,
 			);
 			path = TwitterDemo;
+			sourceTree = "<group>";
+		};
+		CABA64211F573FEE007C84CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CABA64221F573FFF007C84CD /* Service.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		F8ECEC7A71D1EA3F198D5902 /* Pods */ = {
@@ -275,6 +286,7 @@
 				CA1C35921F4A547E00CC053C /* HomeDatasourceController.swift in Sources */,
 				CAF2ED2A1F4B3E59004A899E /* User.swift in Sources */,
 				CA1C358E1F4A53A300CC053C /* UserHeaderFooter.swift in Sources */,
+				CABA64231F573FFF007C84CD /* Service.swift in Sources */,
 				CA9FF06A1F4A397D006A5AD4 /* AppDelegate.swift in Sources */,
 				CA9FF07C1F4A3AC0006A5AD4 /* HomeController.swift in Sources */,
 				CAF2ED321F4B85C9004A899E /* TweetCell.swift in Sources */,
