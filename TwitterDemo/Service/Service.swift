@@ -20,8 +20,6 @@ struct Service {
         // fetch json
         let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home")
         request.perform(withSuccess: { (homeDatasource) in
-            print(homeDatasource.users.count)
-            
             completion(homeDatasource)
         }) { (error) in
             print("error: ", error)

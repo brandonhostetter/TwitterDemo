@@ -13,31 +13,15 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
-    
-    required init(json: JSON) throws {
-        var users = [User]()
-        let array = json["users"].array
-        
-        for userJson in array! {
-            let name = userJson["name"].stringValue
-            let username = userJson["username"].stringValue
-            let bio = userJson["bio"].stringValue
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            users.append(user)
-        }
-        
-        self.users = users
-    }
-    
-    let tweets: [Tweet] = {
-        let brandonUser = User(name: "Brandon Hostetter", username: "@brandonhostetter", bioText: "This is my profile. Today is August 21st. We should see a total solar eclipse today at 2:30pm!", profileImage: #imageLiteral(resourceName: "profile_image"))
-        
-        let tweet = Tweet(user: brandonUser, message: "this is my tweet. blah blah blah. funny stuff here. I'm going to make this a long message so we can see how the cell expands when there is a lot of text. I'm going to make this a long message so we can see how the cell expands when there is a lot of text.")
-        
-        let tweet2 = Tweet(user: brandonUser, message: "shorter tweet")
+    let tweets: [Tweet]
 
-        return [tweet, tweet2]
-    }()
+    required init(json: JSON) throws {
+        let usersArray = json["users"].array
+        let tweetsJsonArray = json["tweets"].array
+
+        self.users = usersArray!.map({ return User(json: $0) })
+        self.tweets = tweetsJsonArray!.map({ return Tweet(json: $0) })
+    }
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
