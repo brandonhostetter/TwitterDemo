@@ -15,6 +15,7 @@
 		CA9FF0711F4A397D006A5AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF0701F4A397D006A5AD4 /* Assets.xcassets */; };
 		CA9FF0741F4A397D006A5AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FF0721F4A397D006A5AD4 /* LaunchScreen.storyboard */; };
 		CA9FF07C1F4A3AC0006A5AD4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FF07B1F4A3AC0006A5AD4 /* HomeController.swift */; };
+		CABA64201F572FB1007C84CD /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABA641F1F572FB1007C84CD /* Tweet.swift */; };
 		CAF2ED2A1F4B3E59004A899E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED291F4B3E59004A899E /* User.swift */; };
 		CAF2ED2C1F4B41D7004A899E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2B1F4B41D7004A899E /* UserCell.swift */; };
 		CAF2ED2E1F4B420D004A899E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2ED2D1F4B420D004A899E /* Constants.swift */; };
@@ -34,6 +35,7 @@
 		CA9FF0731F4A397D006A5AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA9FF0751F4A397D006A5AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9FF07B1F4A3AC0006A5AD4 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		CABA641F1F572FB1007C84CD /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Model/Tweet.swift; sourceTree = "<group>"; };
 		CAF2ED291F4B3E59004A899E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		CAF2ED2B1F4B41D7004A899E /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = VIew/UserCell.swift; sourceTree = "<group>"; };
 		CAF2ED2D1F4B420D004A899E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				CA1C358F1F4A543800CC053C /* HomeDatasource.swift */,
 				CAF2ED291F4B3E59004A899E /* User.swift */,
+				CABA641F1F572FB1007C84CD /* Tweet.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				CAF2ED321F4B85C9004A899E /* TweetCell.swift in Sources */,
 				CAF2ED2C1F4B41D7004A899E /* UserCell.swift in Sources */,
 				CAF2ED2E1F4B420D004A899E /* Constants.swift in Sources */,
+				CABA64201F572FB1007C84CD /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

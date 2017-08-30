@@ -22,7 +22,15 @@ class HomeDatasource: Datasource {
         return [brandonUser, danyUser, jonSnowUser, grrmUser]
     }()
     
-    let tweets = ["tweet1", "tweet2"]
+    let tweets: [Tweet] = {
+        let brandonUser = User(name: "Brandon Hostetter", username: "@brandonhostetter", bioText: "This is my profile. Today is August 21st. We should see a total solar eclipse today at 2:30pm!", profileImage: #imageLiteral(resourceName: "profile_image"))
+        
+        let tweet = Tweet(user: brandonUser, message: "this is my tweet. blah blah blah. funny stuff here. I'm going to make this a long message so we can see how the cell expands when there is a lot of text. I'm going to make this a long message so we can see how the cell expands when there is a lot of text.")
+        
+        let tweet2 = Tweet(user: brandonUser, message: "shorter tweet")
+
+        return [tweet, tweet2]
+    }()
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
@@ -37,6 +45,10 @@ class HomeDatasource: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return self.tweets[indexPath.item]
+        }
+        
         return self.users[indexPath.item]
     }
     
