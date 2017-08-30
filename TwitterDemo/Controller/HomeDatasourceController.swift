@@ -12,6 +12,15 @@ import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
     
+    let errorMsgLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Oops, something went wrong. Please try again later."
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         // makes it relayout the page when the phone rotates
         collectionViewLayout.invalidateLayout()
@@ -20,11 +29,27 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.addSubview(self.errorMsgLabel)
+        self.errorMsgLabel.fillSuperview()
+        
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         
         self.setupNavigationBarItems()
         
-        Service.shared.fetchHomeFeed { (homeDatasource) in
+        Service.shared.fetchHomeFeed { (homeDatasource, error) in
+            if let err = error {
+                self.errorMsgLabel.isHidden = false
+                
+                if let apiError = err as? APIError<Service.JSONError> {
+                    if apiError.response?.statusCode != 200 {
+                        self.errorMsgLabel.text = "No information was returned :("
+                    }
+                }
+                
+                return
+            }
+            
+            self.errorMsgLabel.isHidden = true
             self.datasource = homeDatasource
         }
     }

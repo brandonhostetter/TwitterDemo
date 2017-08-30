@@ -16,11 +16,13 @@ class HomeDatasource: Datasource, JSONDecodable {
     let tweets: [Tweet]
 
     required init(json: JSON) throws {
-        let usersArray = json["users"].array
-        let tweetsJsonArray = json["tweets"].array
+        guard let usersArray = json["users"].array, let tweetsArray = json["tweets"].array
+            else {
+                throw NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey: "Parsing JSON failed."])
+            }
 
-        self.users = usersArray!.map({ return User(json: $0) })
-        self.tweets = tweetsJsonArray!.map({ return Tweet(json: $0) })
+        self.users = usersArray.map({ return User(json: $0) })
+        self.tweets = tweetsArray.map({ return Tweet(json: $0) })
     }
     
     override func footerClasses() -> [DatasourceCell.Type]? {

@@ -6,6 +6,12 @@
 //  Copyright © 2017 Brandon Hostetter. All rights reserved.
 //
 
+
+// let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home")
+// let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home1")
+// let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home_with_error")
+
+
 import Foundation
 import TRON
 import SwiftyJSON
@@ -16,13 +22,13 @@ struct Service {
     
     static let shared = Service()
     
-    func fetchHomeFeed(completion: @escaping (HomeDatasource) -> ()) {
+    func fetchHomeFeed(completion: @escaping (HomeDatasource?, Error?) -> ()) {
         // fetch json
         let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home")
         request.perform(withSuccess: { (homeDatasource) in
-            completion(homeDatasource)
+            completion(homeDatasource, nil)
         }) { (error) in
-            print("error: ", error)
+            completion(nil, error)
         }
     }
     
